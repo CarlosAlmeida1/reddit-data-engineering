@@ -1,1 +1,10 @@
-config/config.conf
+
+# Ignore everything inside the config directory
+/config/*
+
+# But keep example files and a .gitkeep if present (so the folder can stay in the repo)
+!/config/*.example
+!/config/.gitkeep
+
+# Ignore the whole config directory (use this to stop tracking the folder)
+/config/
