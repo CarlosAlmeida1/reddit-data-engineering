@@ -1,8 +1,8 @@
 import configparser
-import os
+from pathlib import Path
 
 parser = configparser.ConfigParser()
-parser.read(os.path.join(os.path.dirname(__file__), '../config/config.conf'))
+parser.read(Path(__file__).resolve().parent.parent / 'config' / 'config.conf')
 
 SECRET = parser.get('api_keys', 'reddit_secret_key')
 CLIENT_ID = parser.get('api_keys', 'reddit_client_id')
